@@ -25,12 +25,14 @@ $pegaso = new Truck();
 // $volvo->wheels = 7;
 
 /* Funciona porque tiene un getter, sino tampoco */
+
 echo "Volvo wheels: " . $volvo->getWheels() . "<br>";
 
 /* No funciona porque Truck no tiene acceso a private wheels */
 //echo "Pegaso wheels: " . $pegaso->getWheels() . "<br>"; No funciona
 
 /* Con protected acceso a las clases padres */
+
 echo $pegaso->getEngine();
 
 ?>

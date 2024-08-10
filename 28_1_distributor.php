@@ -8,6 +8,7 @@ class buyVehicle
         llama con self::[campo]. Mira en la función finalPrice(). O
         Bien con [clase]::[campo] desde fuera de la clase, siempre
         que no sea protected o private buyVehicle::$discount */
+        
     private static int $discount = 0;
 
     public function __construct($range)

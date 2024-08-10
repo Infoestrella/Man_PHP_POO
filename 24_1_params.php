@@ -16,6 +16,7 @@ class Car // crea clase
     private int $engine;
 
     /* El constructor da el estado inicial del objeto cuando se instancia */
+
     public function __construct(){
         $this->wheel = 4;
         $this->colour = "";
@@ -42,6 +43,7 @@ class Car // crea clase
 }
 
 /* instancia clase, llama al constructor y le asigno nombre */
+
 $renault = new Car();
 $volvo = new Car();
 $tesla = new Car();

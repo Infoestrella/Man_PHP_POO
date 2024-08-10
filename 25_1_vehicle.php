@@ -31,6 +31,7 @@ class Car
 }
 
 /* Extends para heredar */
+
 class Truck extends Car
 {
     public function __construct(){
@@ -40,6 +41,7 @@ class Truck extends Car
     }
 
     /* Machaca metodo padre con el mismo nombre*/
+
     public function setColour($truckColour, $truckName){
         $this->colour = $truckColour;
         echo "Colour of " . $truckName . ": " . $this->colour . "<br>";
@@ -47,6 +49,7 @@ class Truck extends Car
 
     /* parent para que 1º ejecute todo lo de la clase padre
         y después lo que añadamos */
+        
     public function start(){
         parent::start();
         echo "Truck started<br>";

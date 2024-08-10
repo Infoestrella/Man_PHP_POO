@@ -17,9 +17,11 @@ $food = array(
 );
 
 /* Acceso a elemento de array de segunda dimensión */
+
 echo $food["Meat"]["Bovine"] . "<br>";
 
 /* Recorrer todo. Ojo al $value1 en el 2º foreach */
+
 foreach($food as $key1=>$value1){
 
     echo "<b>" . $key1 . "</b><br>";

@@ -3,14 +3,17 @@
 class Car
 {
     /* Accesible desde cualquier sitio */
+
     public string $colour;
 
     /* con private sólo es accesible desde la clase. Si queremos
         acceder a ellas utilizamos métodos getter y setters */
+
     private int $wheels;
     
     /* con protected es accesible desde la clase y las hijas.
         Accede también con getter y setters */
+
     protected int $engine;
 
     public function __construct(){
@@ -37,6 +40,7 @@ class Car
     }
 
     /* Esto es un getter, con su mítico return */
+    
     public function getWheels(){
         return $this->wheels;
     }

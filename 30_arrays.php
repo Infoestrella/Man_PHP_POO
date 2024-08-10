@@ -20,16 +20,20 @@ $week[] = "Wedesnay";
 */
 
 /* Asigna todo junto en el indexado */
+
 $week = array("Monday", "Tuesday", "Wedesnay");
 
 /* Agregar un elemento al array indexado */
+
 $week[] = "Thursday";
 echo $week[3] . "<br>";
 
 /* Este es un array asociativo */
+
 $data = array("Nombre"=>"John", "Surname"=>"Black");
 
 /* Agrega elemento al array asociativo. Ojo con el = */
+
 $data["Age"] = "45";
 
 echo $data["Age"];
