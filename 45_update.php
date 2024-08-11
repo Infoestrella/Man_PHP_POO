@@ -9,12 +9,8 @@
 
 <?php
 
-/* Cogemos los datos que vienen de 42_insert_form.php con _GET. Los
-    datos vienen de sus names */
-
 $reference = $_GET["ref"];
 $description = $_GET["description"];
-$updated = $_GET["updated"];
 
 require("38_connection.php");
 
@@ -27,16 +23,15 @@ if (mysqli_connect_errno()){
 
 mysqli_set_charset($connection, "utf8");
 
-$query = "INSERT INTO productos (descripcion, referencia, actualizado)
-    VALUES ('$description', '$reference', '$updated')";
+$query = "UPDATE productos
+    SET descripcion = '$description'
+    WHERE referencia = '$reference'";
 $result = mysqli_query($connection, $query);
-
-/* $result devuelve booleano */
 
 if ($result == false){
     echo "Error";
 }else{
-    echo "Product " . $reference . " saved";
+    echo $reference . " updated";
 }
 
 mysqli_close($connection);
