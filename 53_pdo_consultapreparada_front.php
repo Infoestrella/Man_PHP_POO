@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mysql bbdd</title>
+
+</head>
+<body>
+
+<h1>Search product</h1>
+
+<form name="form" method="get" action="53_pdo_consultapreparada.php">
+    <table>
+        <tr>
+            <td>Description</td>
+            <td><label for="description"></label>
+                <input type="text" name="description" id="description">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="send" value="Send"></td>
+            <td><input type="reset" name="cancel" value="Cancel"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

@@ -48,7 +48,10 @@ class Truck extends Car
     }
 
     /* parent para que 1º ejecute todo lo de la clase padre
-        y después lo que añadamos */
+        y después lo que añadamos.
+        Con el operador :: accedemos a cosas de la clase anterior
+        sin tener que instanciar el objeto. Útil para atributos,
+        métodos estáticos o constantes */
         
     public function start(){
         parent::start();
