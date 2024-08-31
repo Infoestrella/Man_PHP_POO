@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>No title</title>
+</head>
+<body>
+
+<!-- Sistema Blowfish con función password_hash(). Esquema:
+    $2y$: Sistema encriptación
+    15$: Coste (Robustez). Tiempo usado para cifrar. Fijo y configurable.
+    salt: m4mamda8989asadsd9a8s89d89 (código aleatorio)
+    hash: 5da654ag456h48hh
+    
+    Resultado: $2y$15$m4mamda8989asadsd9a8s89d895da654ag456h48hh
+-->
+<h1>Insert user</h1>
+<form action="userinsert.php" method="post">
+    User <input type="text" name="user" id="user"><br>
+    Password <input type="password" name="password" id="password"><br>
+    <input type="submit" name="send" value="send">
+</form>
+
+</body>
+</html>

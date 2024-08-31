@@ -6,8 +6,20 @@
 </head>
 <body>
 
-<a href="content_eng.php">English content</a><br>
-<a href="content_spa.php">Contenido en español</a>
+<?php
+
+if(isset($_COOKIE["selectedLanguage"])){
+    if($_COOKIE["selectedLanguage"]=="es"){
+        header("Location:content_spa.php");
+    }elseif($_COOKIE["selectedLanguage"]=="en"){
+        header("Location:content_eng.php");
+    }
+}
+
+?>
+
+<a href="createcookie.php?language=es">Contenido en español</a><br>
+<a href="createcookie.php?language=en">English content</a>
 
 </body>
 </html>
