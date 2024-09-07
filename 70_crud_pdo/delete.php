@@ -1,8 +1,8 @@
 <?php
 
 include("connection.php");
-$customercode = $_GET["customercode"];
-$base->query("DELETE FROM clientes WHERE codcliente = '$customercode'");
+$agentcode = $_GET["agentcode"];
+$base->query("DELETE FROM agentes WHERE codagente = '$agentcode'");
 header("Location:index.php");
 
 ?>

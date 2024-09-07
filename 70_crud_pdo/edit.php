@@ -8,19 +8,38 @@
 
 <?php
 
-$customercode = $_GET["customercode"];
-$vat = $_GET["vat"];
-$name = $_GET["name"];
-$phone = $_GET["phone"];
+include("connection.php");
+
+/* Si no has pulsado Update ejecuta $_GET */
+if (!isset($_POST["send"])){
+
+    $agentcode = $_GET["agentcode"];
+    $vat = $_GET["vat"];
+    $name = $_GET["name"];
+    $phone = $_GET["phone"];
+
+/* Si he pulsado Update capturo los datos de $_POST */
+}else{
+
+    $agentcode = $_POST["agentcode"];
+    $vat = $_POST["vat"];
+    $name = $_POST["name"];
+    $phone = $_POST["phone"];
+
+    $sql = "UPDATE agentes SET dnicif=:myVat, nombre=:myName, telefono1=:myPhone WHERE codagente=:myAgentCode";
+    $result = $base->prepare($sql);
+    $result->execute(array(":myAgentCode"=>$agentcode, ":myVat"=>$vat, ":myName"=>$name, ":myPhone"=>$phone));
+    header("Location:index.php");
+}
 
 ?>
 
-<form name="formedit" method="post" action="">
+<form name="formedit" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
     <table>
         <tr>
-            <td>Code</td>
+            <td></td>
             <td>
-                <input type="text" name="code" id="code" value=<?php echo $customercode ?>>
+                <input type="hidden" name="agentcode" id="code" value=<?php echo $agentcode ?>>
             </td>
         </tr>
         <tr>
