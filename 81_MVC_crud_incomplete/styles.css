@@ -1,0 +1,81 @@
+/* Estilos Generales de la Tabla */
+.sap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "72", Arial, sans-serif; /* Fuente SAP Fiori */
+    font-size: 14px;
+    color: #32363a; /* Color de texto principal */
+    background-color: #fafafa; /* Fondo general claro */
+}
+
+/* Cabecera de la Tabla */
+.sap-table thead {
+    background-color: #e8e8e8; /* Color de fondo de la cabecera */
+    color: #0a6ed1; /* Color del texto de la cabecera */
+}
+
+.sap-table thead th {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 2px solid #d1d1d1; /* Borde inferior de la cabecera */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Celdas del Cuerpo de la Tabla */
+.sap-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #d1d1d1; /* Borde entre las filas */
+    color: #32363a;
+}
+
+/* Alternar Colores de Filas */
+.sap-table tbody tr:nth-child(odd) {
+    background-color: #f4f4f4; /* Fila impar */
+}
+
+.sap-table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Fila par */
+}
+
+/* Hover de la Fila */
+.sap-table tbody tr:hover {
+    background-color: #e5f3ff; /* Color al pasar el mouse */
+}
+
+/* Estilos para las filas seleccionadas */
+.sap-table tbody tr.selected {
+    background-color: #d0e3f0; /* Fondo de filas seleccionadas */
+    color: #000; /* Color del texto de la fila seleccionada */
+}
+
+/* Estilo de las Celdas con Contenido Numérico */
+.sap-table tbody td.numeric {
+    text-align: right;
+}
+
+/* Paginación (Estilo simple) */
+.sap-pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sap-pagination button {
+    background-color: #0a6ed1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sap-pagination button:disabled {
+    background-color: #b2b2b2;
+    cursor: not-allowed;
+}
+
+.sap-pagination button:hover:not(:disabled) {
+    background-color: #084c9c;
+}
